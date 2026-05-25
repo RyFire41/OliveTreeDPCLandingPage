@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --olive: #6B7C5B;
+  --olive-dark: #405035;
+  --olive-soft: #DDE4D4;
+  --ivory: #F7F5F0;
+  --ivory-warm: #F1EDE3;
+  --ink: #25292A;
+  --muted: #697064;
+  --white: #FFFFFF;
+  --border: rgba(107, 124, 91, 0.22);
+  --shadow: 0 24px 70px rgba(64, 80, 53, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--ivory);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(221, 228, 212, 0.8), transparent 34rem),
+    linear-gradient(180deg, var(--ivory) 0%, #fbfaf7 52%, var(--ivory-warm) 100%);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-shell { overflow: hidden; min-height: 100vh; }
+
+.hero {
+  position: relative;
+  min-height: 84vh;
+  padding: 28px clamp(20px, 5vw, 76px) 82px;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.brand img { width: min(220px, 52vw); height: auto; display: block; }
+
+.nav-cta {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 11px 18px;
+  color: var(--olive-dark);
+  background: rgba(255, 255, 255, 0.46);
+  backdrop-filter: blur(14px);
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.nav-cta:hover { transform: translateY(-1px); border-color: rgba(107,124,91,.42); background: rgba(255,255,255,.75); }
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 112px auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.76fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--olive);
+  font-size: 14px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 22px;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--olive-dark);
+  font-size: clamp(56px, 8vw, 112px);
+  line-height: .88;
+  letter-spacing: -.055em;
+  font-weight: 600;
+  max-width: 850px;
+  margin: 0;
+}
+
+.subheadline {
+  margin: 30px 0 0;
+  max-width: 690px;
+  color: var(--muted);
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.65;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 22px;
+  margin-top: 38px;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 15px 22px;
+  font-weight: 600;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.button-primary {
+  color: var(--white);
+  background: var(--olive-dark);
+  box-shadow: 0 16px 34px rgba(64,80,53,.22);
+}
+
+.button-primary:hover,
+.button-secondary:hover { transform: translateY(-2px); }
+
+.cta-note {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.hero-card {
+  justify-self: end;
+  width: min(100%, 400px);
+  min-height: 470px;
+  border: 1px solid rgba(107,124,91,.18);
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.72), rgba(247,245,240,.48)),
+    radial-gradient(circle at 50% 20%, rgba(221,228,212,.82), transparent 19rem);
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 42px;
+  backdrop-filter: blur(18px);
+}
+
+.hero-logo { width: min(220px, 68%); height: auto; opacity: .92; }
+
+.card-line {
+  width: 62px;
+  height: 1px;
+  background: var(--border);
+  margin: 10px auto 0;
+}
+
+.hero-card p {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--olive-dark);
+  font-size: 25px;
+  line-height: 1.16;
+  margin: 0;
+}
+
+.ambient {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(4px);
+}
+
+.ambient-one {
+  width: 34rem;
+  height: 34rem;
+  right: -13rem;
+  top: 8rem;
+  background: rgba(221, 228, 212, 0.62);
+}
+
+.ambient-two {
+  width: 28rem;
+  height: 28rem;
+  left: -14rem;
+  bottom: -4rem;
+  background: rgba(107, 124, 91, 0.11);
+}
+
+.pillars {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px clamp(20px, 5vw, 76px) 76px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.pillars article {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 30px;
+  background: rgba(255,255,255,.52);
+}
+
+.pillars svg { color: var(--olive); }
+
+.pillars h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--olive-dark);
+  margin: 24px 0 10px;
+}
+
+.pillars p {
+  color: var(--muted);
+  line-height: 1.62;
+  margin: 0;
+}
+
+.closing {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 76px clamp(20px, 5vw, 76px) 96px;
+  text-align: center;
+}
+
+.closing p {
+  color: var(--olive);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.closing h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--olive-dark);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  margin: 0 auto 32px;
+}
+
+.button-secondary {
+  border: 1px solid var(--border);
+  color: var(--olive-dark);
+  background: rgba(255,255,255,.64);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px clamp(20px, 5vw, 76px);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .hero { min-height: auto; padding-top: 22px; padding-bottom: 58px; }
+  .nav-cta { display: none; }
+  .hero-grid { grid-template-columns: 1fr; margin-top: 74px; }
+  h1 { font-size: clamp(52px, 18vw, 78px); }
+  .subheadline { font-size: 18px; }
+  .hero-card { justify-self: stretch; min-height: 300px; padding: 32px; }
+  .hero-logo { width: 190px; }
+  .pillars { grid-template-columns: 1fr; padding-bottom: 44px; }
+  footer { flex-direction: column; }
+}

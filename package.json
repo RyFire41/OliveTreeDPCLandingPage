@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@preact/compat": "^18.3.2",
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "latest",
+    "preact": "^10.29.2",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "source-map-explorer": "^2.5.3"
+  }
+}

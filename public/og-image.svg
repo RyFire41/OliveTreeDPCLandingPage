@@ -1,0 +1,9 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7F5F0"/>
+  <circle cx="990" cy="70" r="360" fill="#DDE4D4" opacity=".75"/>
+  <circle cx="120" cy="580" r="300" fill="#6B7C5B" opacity=".12"/>
+  <text x="110" y="168" fill="#6B7C5B" font-family="Inter, Arial, sans-serif" font-size="28" letter-spacing="8">OLIVE TREE DPC</text>
+  <text x="110" y="318" fill="#405035" font-family="Georgia, serif" font-size="92">Primary care rooted</text>
+  <text x="110" y="420" fill="#405035" font-family="Georgia, serif" font-size="92">in relationship.</text>
+  <text x="112" y="502" fill="#697064" font-family="Inter, Arial, sans-serif" font-size="34">Coming soon to South Florida.</text>
+</svg>
