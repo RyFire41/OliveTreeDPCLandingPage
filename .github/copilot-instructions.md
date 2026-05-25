@@ -76,3 +76,12 @@ What I couldn't discover automatically
 - Any CI pipeline conventions beyond Cloudflare Pages (no `.github/workflows` present).
 
 If something is unclear or you want the file to include more details (example PR templates, linting rules, or CI examples), tell me which area to expand and I'll iterate.
+
+Preact optimization (applied)
+- During experimentation I replaced React with Preact via Vite aliases to reduce bundle size. The production build after the change produced:
+
+  dist/index.html                   1.00 kB │ gzip:  0.49 kB
+  dist/assets/index-BMhgFFu9.css    4.93 kB │ gzip:  1.78 kB
+  dist/assets/index-DJEHgPF4.js     29.57 kB │ gzip: 11.69 kB
+
+- Rationale: Preact provides a compatible, much smaller runtime for small static landing pages where advanced React-only features aren't required. This substitution is low-risk for this repo because components are simple and there's no server-side rendering. Keep an eye on any rare React compatibility differences (edge-case hooks or third-party libs) and revert if needed.
