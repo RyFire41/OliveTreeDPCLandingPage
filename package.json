@@ -14,6 +14,7 @@
     "vite": "latest"
   },
   "devDependencies": {
+    "rollup-plugin-visualizer": "^5.14.0",
     "source-map-explorer": "^2.5.3"
   }
 }
