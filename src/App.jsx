@@ -16,7 +16,7 @@ function App() {
 
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Opening soon to South Florida</p>
+            <p className="eyebrow">Opening Soon In South Florida</p>
             <h1>Primary care rooted in relationship.</h1>
             <p className="subheadline">
               Olive Tree DPC is building a calmer, more personal approach to primary care:
@@ -48,7 +48,7 @@ function App() {
         <article>
           <HeartHandshake size={24} strokeWidth={1.6} />
           <h2>Personal connection</h2>
-          <p>A quieter, more accessible experience designed for continuity.</p>
+          <p>Primary care designed to feel personal again.</p>
         </article>
         <article>
           <Leaf size={24} strokeWidth={1.6} />
@@ -64,8 +64,7 @@ function App() {
       </section>
 
       <footer>
-        <p>© 2026 Olive Tree DPC. All rights reserved.</p>
-        <p>Direct primary care. South Florida.</p>
+        <p>© 2026 Olive Tree DPC</p>
       </footer>
     </main>
   )
