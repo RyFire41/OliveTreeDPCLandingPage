@@ -11,7 +11,16 @@ function App() {
           <a className="brand" href="/" aria-label="Olive Tree DPC home">
             <img src="/logo-horizontal.svg" alt="Olive Tree DPC" />
           </a>
-          <a className="nav-cta" href={FORM_URL} target="_blank" rel="noopener noreferrer" aria-label="Join the Olive Tree interest list (opens in a new tab)">Join the Interest List</a>
+          <a
+  className="nav-cta"
+  href={FORM_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => window.gtag?.('event', 'interest_list_header_click')}
+  aria-label="Join the Olive Tree interest list (opens in a new tab)"
+>
+  Join the Interest List
+</a>
         </nav>
 
         <div className="hero-grid">
@@ -23,10 +32,17 @@ function App() {
               centered on meaningful relationships, thoughtful accessibility, and whole-person care.
             </p>
             <div className="cta-row">
-              <a className="button-primary" href={FORM_URL} target="_blank" rel="noopener noreferrer" aria-label="Join the interest list (opens in a new tab)">
-                Join the Interest List
-                <ArrowRight size={18} strokeWidth={1.8} />
-              </a>
+              <a
+  className="button-primary"
+  href={FORM_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => window.gtag?.('event', 'interest_list_hero_click')}
+  aria-label="Join the interest list (opens in a new tab)"
+>
+  Join the Interest List
+  <ArrowRight size={16} strokeWidth={2} /> 
+</a>
               <p className="cta-note" id="interest-note">Be the first to hear when memberships open.</p>
             </div>
           </div>
@@ -60,7 +76,16 @@ function App() {
   <section className="closing">
         <p>Thoughtful care takes time.</p>
         <h2>Olive Tree DPC is being intentionally built for individuals and families seeking a more personal healthcare experience.</h2>
-        <a className="button-secondary" href={FORM_URL} target="_blank" rel="noopener noreferrer" aria-describedby="interest-note">Join the Interest List</a>
+<a
+  className="button-secondary"
+  href={FORM_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => window.gtag?.('event', 'interest_list_footer_click')}
+  aria-describedby="interest-note"
+>
+  Join the Interest List
+</a>
       </section>
 
       <footer>
